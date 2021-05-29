@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package foxmula;
+package com.foxmula.Assignment1;
 
 import java.util.Scanner;
 
@@ -11,42 +11,40 @@ import java.util.Scanner;
  *
  * @author aditya
  */
-class StackOperation {
-    
-    private int max;
-    private int[] st;
-    private int top;
 
-    public StackOperation(int s) {
-        this.max = s;
-        this.st = new int[s];
-        this.top = -1;
-    }
-    public void push(int n){
-        if(top<max-1){
-            st[++top]=n;
-        }else{
-            System.out.println("Invalid Operation Stack full");
-        }
-    }
-    public void pop(){
-        if(!isEmpty()){
-            System.out.println("Invalid Operation Stack Empty");
-        }else
-            top--;
-    }
-    boolean isEmpty(){
-        return top != -1;
-    }
-    public int getsize(){
-        return top;
-    }
-}
-public class Stack{
+public class Main {
+
     public static void main(String[] args) {
-        StackOperation st1 = new StackOperation(2);
-        StackOperation st2 = new StackOperation(2);
+        
+        // Square
+        Square s = new Square(1,1,2,2,1,2,1,2);
+        s.area();
+        
+        //Rectangle
+        Rectangle r = new Rectangle(-6,6,6,-6,2,2,0,0);
+        r.area();
+        
+        //Trapezoid
+        Trapezoid t = new Trapezoid(-2,2,6,-6,2,2,0,0,2);
+        t.area();
+        
+        //Paralleogram
+        Parallelogram p = new Parallelogram(18,48,36,6,26,26,7,7,19);
+        p.area();
+        
+        
+        //Adding 2 times
+        Time t1=new Time(2, 45, 55);
+        Time t2=new Time(6, 15, 5);
+        t1.add(t2);
+        
+        
+        //Stacks
         Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the size of the stack");
+        int size = sc.nextInt();
+        StackOperation st1 = new StackOperation(size);
+        StackOperation st2 = new StackOperation(size);
         boolean flag=true;
         while(flag){
             System.out.println("Enter Your choice");
@@ -87,4 +85,5 @@ public class Stack{
             }
         }
     }
+    
 }

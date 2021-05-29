@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package foxmula;
+package com.foxmula.Assignment1;
 
 /**
  *
@@ -31,11 +31,5 @@ public class Time {
             m-=((m/60)*60);
         }
         System.out.println("Time : "+hr+" hr "+m+" min "+s+" sec ");
-    }
-    
-    public static void main(String[] args) {
-        Time t1=new Time(2, 45, 55);
-        Time t2=new Time(6, 15, 5);
-        t1.add(t2);
     }
 }
