@@ -37,7 +37,7 @@ class StackOperation {
         
     }
     public void pop(){
-        if(top==null)
+        if(isEmpty())
             System.out.println("Can't remove stack empty");
         else{
             top=top.next;
