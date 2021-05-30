@@ -12,32 +12,42 @@ package com.foxmula.Assignment1;
  */
 class StackOperation {
     
-    private int max;
-    private int[] st;
-    private int top;
+    
+    private class Node{
+        int data;
+        Node next;
 
-    public StackOperation(int s) {
-        this.max = s;
-        this.st = new int[s];
-        this.top = -1;
-    }
-    public void push(int n){
-        if(top<max-1){
-            st[++top]=n;
-        }else{
-            System.out.println("Invalid Operation Stack full");
+        public Node(int data) {
+            this.data = data;
         }
     }
+    
+    private Node top;
+    private int elemCount;
+
+    public StackOperation() {
+        this.top = null;
+        elemCount=-1;
+    }
+    public void push(int n){
+        Node n1 = new Node(n);
+        n1.next = top;
+        top = n1;
+        ++elemCount;
+        
+    }
     public void pop(){
-        if(!isEmpty()){
-            System.out.println("Invalid Operation Stack Empty");
-        }else
-            top--;
+        if(top==null)
+            System.out.println("Can't remove stack empty");
+        else{
+            top=top.next;
+            --elemCount;
+        }
     }
     boolean isEmpty(){
-        return top != -1;
+        return top == null;
     }
     public int getsize(){
-        return top;
+        return elemCount;
     }
 }

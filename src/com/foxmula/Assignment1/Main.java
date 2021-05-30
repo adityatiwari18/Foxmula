@@ -41,10 +41,9 @@ public class Main {
         
         //Stacks
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the size of the stack");
-        int size = sc.nextInt();
-        StackOperation st1 = new StackOperation(size);
-        StackOperation st2 = new StackOperation(size);
+        
+        StackOperation st1 = new StackOperation();
+        StackOperation st2 = new StackOperation();
         boolean flag=true;
         while(flag){
             System.out.println("Enter Your choice");
