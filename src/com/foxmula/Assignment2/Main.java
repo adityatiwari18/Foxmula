@@ -21,11 +21,17 @@ public class Main {
         
         //ArrayList element check
         ArrayList l = new ArrayList<>();
-        System.out.println(new ArrayListCheck().check(l)+"\n");
+        l.add(1);
+        l.add(54);
+        l.add(21);
+        System.out.println(new ArrayListCheck().check(l, 21)+"\n");
         
         //Set element check
         Set s = new HashSet<>();
-        System.out.println(new SetCheck().check(s)+"\n");
+        s.add(12);
+        s.add(54);
+        s.add(342);
+        System.out.println(new SetCheck().check(s, 12)+"\n");
         
         //HashSet traversal
         HashSet<Integer> hs = new HashSet<>();

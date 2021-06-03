@@ -12,7 +12,7 @@ import java.util.Set;
  * @author aditya
  */
 public class SetCheck {
-    public boolean check(Set s){
-        return s.isEmpty();
+    public boolean check(Set s, int a){
+        return s.contains(a);
     }
 }
